@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4c4c;
+        }
+        .error-details {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .error-section {
+            margin-bottom: 10px;
+        }
+        .error-section h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .error-section pre {
+            margin: 5px 0 0;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>An Error Occurred</h1>
+    <p>There was a problem processing your request. The error details are provided below for debugging purposes.</p>
+
+    <div class="error-details">
+        <div class="error-section">
+            <h2>Status:</h2>
+            <pre><%= status %></pre>
+        </div>
+        <div class="error-section">
+            <h2>Status Code:</h2>
+            <pre><%= statusCode %></pre>
+        </div>
+        <div class="error-section">
+            <h2>Message:</h2>
+            <pre><%= message %></pre>
+        </div>
+        <% if (isDebug && stack) { %>
+        <div class="error-section">
+            <h2>Stack Trace:</h2>
+            <pre><%= stack %></pre>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>

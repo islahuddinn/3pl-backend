@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center;">
+        <div style="padding: 20px;">
+            <div style="display: flex; justify-content: center;">
+                <!-- <img src="https://cdn.shopify.com/s/files/1/0418/6429/8657/collections/lawnkari.jpg?v=1710842847" alt=""> -->
+                <img src="../public/assets/logo.png" alt="">
+            </div>
+        <h3>
+            Thank you for using Health Care Feedback Platform
+        </h3>
+    
+        <p>
+            You have Received <%= data.completedFeedbackCount %> Completed Feedback In This week.
+        </p>
+
+        <p>
+            You have Received <%= data.pendingFeedbackCount %> Pending Feedback In This week.
+        </p>
+        
+        <p>
+            You have Received <%= data.overdueFeedbackCount %> Overdue Feedback In This week.
+        </p>
+        
+        <p>
+            You have Received <%= data.positiveFeedbackCount %> Positive Feedback In This week.
+        </p>
+        
+        <p>
+            You have Received <%= data.negativeFeedbackCount %> Negative Feedback In This week.
+        </p>
+        
+        <p>
+            You have Received 20 Show Round Feedback In This week.
+        </p>
+    </div>
+    </div>
+
+</body>
+</html>
